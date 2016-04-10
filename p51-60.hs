@@ -32,7 +32,7 @@ primeValueFamily x = map (filter isPrime . whitemask x) digits where
                  digits = subsets [1..(numDigits x)]
 
 p51 :: Int
-p51 = fromMaybe (error "This is just dumb...") (find (\x -> any (\y -> length y == 8 && x `elem` y) (primeValueFamily x)) ( drop 1000 primes ))
+p51 = fromMaybe (error "This is just dumb...") (find (\x -> any (\y -> length y == 8 && x `elem` y) (primeValueFamily x)) ( drop 10000 primes ))
 
 main :: IO ()
 main = do
